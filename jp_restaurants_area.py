@@ -30,15 +30,15 @@ ax1.stackplot(
     df["oceania"],
     df["middle_east"],
     df["africa"],
-    labels=["Asia","North America","Europe","Latin America","Oceania","Middle East","Africa"],
+    labels=["アジア","北米","欧州","中南米","オセアニア","中東","アフリカ"],
     colors=colors,
     edgecolor="black",
     linewidth=0.4,
     alpha=0.95
 )
 ax1.plot(df["year"], df["total"], color="black", linewidth=1.6, marker="o", label="Total")
-ax1.set_title("Japanese Restaurants Overseas by Region")
-ax1.set_ylabel("Restaurants")
+ax1.set_title("海外における日本食レストラン数（地域別）")
+ax1.set_ylabel("店舗数")
 ax1.grid(axis="y", linestyle="--", linewidth=0.5, alpha=0.5)
 ax1.legend(ncol=2, frameon=False, fontsize=9, loc="upper left")
 
@@ -57,10 +57,10 @@ gray_lines = {
 }
 
 for col, label in [
-    ("latin_america", "Latin America"),
-    ("oceania", "Oceania"),
-    ("middle_east", "Middle East"),
-    ("africa", "Africa"),
+   ("latin_america", "中南米"),
+    ("oceania", "オセアニア"),
+    ("middle_east", "中東"),
+    ("africa", "アフリカ"),
 ]:
     ls, mk = line_styles[col]
     ax2.plot(
@@ -69,8 +69,8 @@ for col, label in [
         color=gray_lines[col], label=label
     )
 
-ax2.set_ylabel("Restaurants")
-ax2.set_xlabel("Year")
+ax2.set_ylabel("店舗数")
+ax2.set_xlabel("年")
 ax2.grid(axis="y", linestyle="--", linewidth=0.5, alpha=0.5)
 ax2.legend(frameon=False, ncol=2, fontsize=9, loc="upper left")
 
