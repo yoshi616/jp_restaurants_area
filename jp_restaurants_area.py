@@ -75,5 +75,5 @@ ax2.grid(axis="y", linestyle="--", linewidth=0.5, alpha=0.5)
 ax2.legend(frameon=False, ncol=2, fontsize=9, loc="upper left")
 
 plt.tight_layout()
-plt.show()
 plt.savefig("jp_restaurants_area.png", dpi=300, bbox_inches="tight")
+plt.show()
