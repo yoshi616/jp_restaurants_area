@@ -48,3 +48,4 @@ ax.legend(frameon=False)
 
 plt.tight_layout()
 plt.show()
+plt.savefig("jp_restaurants_country.png", dpi=300, bbox_inches="tight")
